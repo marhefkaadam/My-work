@@ -1,0 +1,280 @@
+###
+GET http://localhost:8080/api/manufacturers
+
+###
+GET http://localhost:8080/api/manufacturers/24
+
+###
+GET http://localhost:8080/api/manufacturers/1000
+
+###
+DELETE http://localhost:8080/api/manufacturers/1000
+
+###
+POST http://localhost:8080/api/manufacturers
+Content-Type: application/json
+
+{
+  "companyName": "Vlaky Praha",
+  "email": "vlakypraha@gmail.com"
+}
+
+###
+GET http://localhost:8080/api/manufacturers
+
+### PUT http://localhost:8080/api/manufacturers/{id}
+PUT http://localhost:8080/api/manufacturers/35
+Content-Type: application/json
+
+{
+  "companyName": "Vlaky Praha",
+  "email": "vlakypraha@gmail.com",
+  "phoneNumber": "+421934938402"
+}
+
+###
+GET http://localhost:8080/api/manufacturers/35
+
+### GETs all manufacturers of trains which has production_year = 2016 (or the one in pathVariable)
+### GET http://localhost:8080/api/manufacturers/trains/{production_year}
+GET http://localhost:8080/api/manufacturers/trains/2016
+
+### GET http://localhost:8080/api/manufacturers/trains/{production_year}
+GET http://localhost:8080/api/manufacturers/trains/2000
+
+### GET http://localhost:8080/api/manufacturers/trains/{production_year}
+GET http://localhost:8080/api/manufacturers/trains/3333
+
+###
+DELETE http://localhost:8080/api/manufacturers/35
+
+###
+GET http://localhost:8080/api/manufacturers/31
+
+###
+PUT http://localhost:8080/api/manufacturers/31
+Content-Type: application/json
+
+{
+  "companyName": "Vlaky Sládkovičovo",
+  "email": "vlakysladkovicovo@gmail.com",
+  "phoneNumber": "+421944098408"
+}
+
+###
+GET http://localhost:8080/api/manufacturers/31
+
+###
+GET http://localhost:8080/api/trains
+
+###
+GET http://localhost:8080/api/trains/24
+
+###
+GET http://localhost:8080/api/trains/1000
+
+### INVALID DELETE
+DELETE http://localhost:8080/api/trains/1000
+
+###
+DELETE http://localhost:8080/api/trains/124
+
+### INVALID POST, manufacturerId is not present in the database
+POST http://localhost:8080/api/trains
+Content-Type: application/json
+
+{
+  "maxSpeed": 150,
+  "productionYear": 2020,
+  "manufacturerId": 500000
+}
+
+### INVALID POST, manufacturerId is missing
+POST http://localhost:8080/api/trains
+Content-Type: application/json
+
+{
+  "maxSpeed": 150,
+  "productionYear": 2020
+}
+
+###
+POST http://localhost:8080/api/trains
+Content-Type: application/json
+
+{
+  "maxSpeed": 150,
+  "productionYear": 2020,
+  "manufacturerId": 5
+}
+
+###
+GET http://localhost:8080/api/trains/159
+
+### PUT http://localhost:8080/api/trains/{id}
+PUT http://localhost:8080/api/trains/159
+Content-Type: application/json
+
+{
+  "maxSpeed": 200,
+  "productionYear": 2020,
+  "manufacturerId": 5
+}
+
+###
+GET http://localhost:8080/api/trains/159
+
+###
+GET http://localhost:8080/api/trains/22
+
+### PUT http://localhost:8080/api/trains/{id}
+PUT http://localhost:8080/api/trains/22
+Content-Type: application/json
+
+{
+  "maxSpeed": 290,
+  "productionYear": 1997,
+  "revisionValidity": "2025-08-31",
+  "manufacturerId": 5
+}
+
+### INVALID PUT - cannot change revisionValidity if productionYear is more than 20 year ago
+PUT http://localhost:8080/api/trains/22
+Content-Type: application/json
+
+{
+  "maxSpeed": 290,
+  "productionYear": 1997,
+  "revisionValidity": "2030-01-01",
+  "manufacturerId": 5
+}
+
+
+### GETs all mechanics which have repaired a train with given ID
+GET http://localhost:8080/api/trains/159/mechanics
+
+###
+POST http://localhost:8080/api/trains/159/mechanics/14
+
+###
+POST http://localhost:8080/api/trains/159/mechanics/1
+
+###
+POST http://localhost:8080/api/trains/159/mechanics/16
+
+### INVALID POST - mechanics with gived id doesn't exist
+POST http://localhost:8080/api/trains/159/mechanics/1000
+
+### GETs all mechanics who have repaired a train with given ID
+GET http://localhost:8080/api/trains/159/mechanics
+
+### INVALID DELETE - invalic mechanic id
+DELETE http://localhost:8080/api/trains/159/mechanics/1000
+
+###
+DELETE http://localhost:8080/api/trains/159/mechanics/16
+
+### GETs all mechanics who have repaired a train with given ID
+GET http://localhost:8080/api/trains/159/mechanics
+
+
+###
+GET http://localhost:8080/api/mechanics
+
+###
+GET http://localhost:8080/api/mechanics/24
+
+###
+GET http://localhost:8080/api/mechanics/1000
+
+###
+DELETE http://localhost:8080/api/mechanics/1000
+
+###
+POST http://localhost:8080/api/mechanics
+Content-Type: application/json
+
+{
+  "name": "Janko",
+  "surname": "Hraško",
+  "phoneNumber": "+420093803840",
+  "manufacturerId": 3
+}
+
+### INVALID, manufacturerId is null
+POST http://localhost:8080/api/mechanics
+Content-Type: application/json
+
+{
+  "name": "Karol",
+  "surname": "Pavel",
+  "phoneNumber": "+420093803840"
+}
+
+### INVALID, manufacturerId is not present
+POST http://localhost:8080/api/mechanics
+Content-Type: application/json
+
+{
+  "name": "Karol",
+  "surname": "Pavel",
+  "phoneNumber": "+420093803840",
+  "manufacturerId": 3000
+}
+
+
+###
+GET http://localhost:8080/api/mechanics
+
+###
+GET http://localhost:8080/api/mechanics/77
+
+
+### PUT http://localhost:8080/api/mechanics/{id}
+PUT http://localhost:8080/api/mechanics/77
+Content-Type: application/json
+
+{
+  "name": "Karol",
+  "surname": "Pavel",
+  "phoneNumber": null,
+  "manufacturerId": 3
+}
+
+### PUT http://localhost:8080/api/mechanics/{id}
+### INVALID, manufacturer can not be null
+PUT http://localhost:8080/api/mechanics/77
+Content-Type: application/json
+
+{
+  "name": "Karol",
+  "surname": "Pavel",
+  "phoneNumber": null,
+  "manufacturerId": null
+}
+
+### INVALID, manufacturer with given id doesn't exist
+PUT http://localhost:8080/api/mechanics/77
+Content-Type: application/json
+
+{
+  "name": "Karol",
+  "surname": "Pavel",
+  "phoneNumber": null,
+  "manufacturerId": -1
+}
+
+###
+GET http://localhost:8080/api/mechanics/77
+
+###
+GET http://localhost:8080/api/mechanics/
+
+###
+DELETE http://localhost:8080/api/mechanics/77
+
+### already deleted
+DELETE http://localhost:8080/api/mechanics/77
+
+
+

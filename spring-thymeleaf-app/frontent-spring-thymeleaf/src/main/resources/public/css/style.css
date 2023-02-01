@@ -1,0 +1,69 @@
+.buttons {
+    margin: 20px 0;
+}
+
+input, select {
+    margin-bottom: 20px;
+}
+
+header {
+    display:flex;
+    background-color: #262626;
+    padding: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+header a {
+    display: flex;
+    align-items: center
+}
+
+header .search-container {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 2em;
+    padding-left: 10px;
+    line-height: 1.1;
+    border-left: 1px solid darkgrey;
+}
+
+header img {
+    height: 50px;
+    padding-right: 15px;
+}
+
+main {
+    margin: 0 100px
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    margin: 0 3px;
+}
+
+header form input {
+    margin: 0 -10px 0 0;
+    width: 380px !important;
+}
+
+.button.is-info {
+    display: none;
+}

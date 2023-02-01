@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="/css/style.css">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARails | Add train</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+</head>
+<body>
+
+<header>
+    <a href="/">
+        <img src="/favicon.png">
+        <h1>ARails</h1>
+    </a>
+</header>
+
+<main>
+    <h2>Register new train</h2>
+    <form method="post" action="#" id="trainReg" th:action="@{/add}" th:object="${trainModel}">
+        <label class="label" for="maxSpeed">Maximum speed limit</label>
+        <input class="input" min="0" type="number" name="maxSpeed" id="maxSpeed" th:field="*{maxSpeed}" required/>
+
+        <label class="label" for="productionYear">Year of production</label>
+        <input class="input" min="0" type="number" name="productionYear" id="productionYear" th:field="*{productionYear}" required/>
+
+        <label class="label" for="revisionValidity">End of revision validity</label>
+        <input class="input" type="date" name="revisionValidity" id="revisionValidity" th:field="*{revisionValidity}"/>
+        <label class="label" for="manufacturerId">Manufacturer</label>
+        <div class="select is-primary">
+            <select th:field="*{manufacturerId}" required>
+                <div th:each="manufacturer : ${manufacturers}">
+                    <option id="manufacturerId" th:value="${manufacturer.id}" th:text="${manufacturer.companyName}">companyName</option>
+                </div>
+            </select>
+        </div>
+    </form>
+
+    <div class="buttons">
+        <button type="submit" form="trainReg" class="button is-primary">Submit</button>
+        <a class="button is-secondary" href="/">Back</a>
+    </div>
+
+</main>
+</body>
+</html>
