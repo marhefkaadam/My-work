@@ -1,0 +1,105 @@
+<quiz>
+Kviz slovensko
+<pages>
+<page>
+<question>
+single-choice
+Co je hlavnym mestom Slovenska?
+<options>
+4
+Presov
+Poprad
+Bratislava
+Kosice
+</options>
+<rules_exist>
+N
+3
+</question>
+</page>
+<page>
+<question>
+multi-choice
+Vyber slovenskych rodakov!
+<options>
+6
+Ludovit Stur
+Janko Kral
+Kralovna Elizabeth
+Albert Einstain
+Peter Bathanyi
+M. R. Stefanik
+</options>
+<reference>
+4
+1
+2
+5
+6
+</reference>
+</question>
+<question>
+text
+Kde sa na SVK vyrabaju pracky?
+set
+<reference>
+2
+Poprad
+Spisska Nova Ves
+</reference>
+</question>
+</page>
+<page>
+<question>
+single-choice
+Kolko maš rokov?
+<options>
+2
+<18
+>=18
+</options>
+<rules_exist>
+Y
+</question>
+</page>
+<page>
+<question>
+text
+Akou farbou by si natrel stenu ak by to bola prva farba slovenskej zastavy?
+contains-word
+bielou
+</question>
+</page>
+<page>
+<question>
+multi-choice
+Ake pivo sa vyraba na Slovensku?
+<options>
+5
+Saris
+Pilsner urquell
+Zlaty bazant
+Staropramen
+Desperados
+</options>
+<reference>
+3
+1
+3
+4
+</reference>
+</question>
+</page>
+</pages>
+<rules>
+<rule>
+3
+1
+2
+2
+5
+1
+4
+</rule>
+</rules>
+</quiz>

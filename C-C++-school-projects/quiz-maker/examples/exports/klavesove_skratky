@@ -1,0 +1,121 @@
+<quiz>
+Klávesové skratky
+<pages>
+<page>
+<question>
+single-choice
+Akou skratkou sa kopíruje?
+<options>
+3
+ctrl+b
+ctrl+v
+ctrl+c
+</options>
+<rules_exist>
+N
+3
+</question>
+<question>
+single-choice
+Čo sa stane ak stlačíme ctrl-p?
+<options>
+4
+Vytlačíme dokument
+Presunieme sa na vedľajšiu kartu, v prehliadači
+Uložíme obrázok
+Vypneme počítač
+</options>
+<rules_exist>
+N
+1
+</question>
+<question>
+single-choice
+Akou skratkou sa vystrihuje?
+<options>
+5
+ctrl-z
+ctrl-x
+ctrl-k
+ctrl-f
+ctrl-alt-f
+</options>
+<rules_exist>
+N
+1
+</question>
+</page>
+<page>
+<question>
+single-choice
+Akou skratkou odstránime v MS Office odstavec?
+<options>
+2
+ctrl-j
+ctrl-q
+</options>
+<rules_exist>
+N
+2
+</question>
+<question>
+single-choice
+Čo sa stane ak stlačíme alt + enter?
+<options>
+4
+Zatvorí sa okno prehliadača
+Maximalizuje sa okno prehrávača
+Zatvorí sa karta prehliadača
+Stiahneme hack z googlu
+</options>
+<rules_exist>
+N
+2
+</question>
+</page>
+<page>
+<question>
+text
+Doplňte písmeno pre skratku na prilepenie skopírovaného textu: Ctrl + ? ?
+exact-match
+V
+</question>
+<question>
+single-choice
+Akou klávesovou skatkou opäť otvoríme omylom zatv orené stránky v prehliadači?
+<options>
+6
+ctrl + x
+ctrl + alt + f
+ctrl + shift + x
+ctrl + shift + j
+nič z uvedených
+ctrl + alt + o
+</options>
+<rules_exist>
+N
+5
+</question>
+</page>
+<page>
+<question>
+multi-choice
+Aké sú najpoužívanejšie klávesové skratky programátora?
+<options>
+4
+ctrl + c
+ctrl + p
+ctrl + v
+žiadna z uvedených
+</options>
+<reference>
+2
+1
+3
+</reference>
+</question>
+</page>
+</pages>
+<rules>
+</rules>
+</quiz>

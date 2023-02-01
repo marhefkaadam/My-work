@@ -1,0 +1,63 @@
+<quiz>
+General knowledge
+<pages>
+<page>
+<question>
+single-choice
+How many time zones are there in Russia?
+<options>
+5
+11
+12
+13
+8
+9
+</options>
+<rules_exist>
+N
+1
+</question>
+<question>
+text
+What’s the national flower of Japan?
+contains-word
+cherry
+</question>
+<question>
+text
+How many days does it take for the Earth to orbit the Sun?
+exact-match
+365
+</question>
+</page>
+<page>
+<question>
+text
+Until 1923, what was the Turkish city of Istanbul called?
+set
+<reference>
+2
+Constantinople
+constantinople
+</reference>
+</question>
+</page>
+<page>
+<question>
+single-choice
+What’s the capital of Canada?
+<options>
+3
+Ottawa
+Toronto
+Vancouver
+</options>
+<rules_exist>
+N
+1
+</question>
+</page>
+</pages>
+<rules>
+</rules>
+</quiz>

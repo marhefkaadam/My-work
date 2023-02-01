@@ -1,0 +1,119 @@
+<quiz>
+General knowledge - extended
+<pages>
+<page>
+<question>
+single-choice
+How many time zones are there in Russia?
+<options>
+5
+11
+12
+13
+8
+9
+</options>
+<rules_exist>
+N
+1
+</question>
+<question>
+text
+What’s the national flower of Japan?
+contains-word
+cherry
+</question>
+<question>
+text
+How many days does it take for the Earth to orbit the Sun?
+exact-match
+365
+</question>
+</page>
+<page>
+<question>
+text
+Until 1923, what was the Turkish city of Istanbul called?
+set
+<reference>
+2
+Constantinople
+constantinople
+</reference>
+</question>
+</page>
+<page>
+<question>
+single-choice
+What’s the capital of Canada?
+<options>
+3
+Ottawa
+Toronto
+Vancouver
+</options>
+<rules_exist>
+N
+1
+</question>
+<question>
+single-choice
+Are you sure about your previous answer?
+<options>
+2
+Yes
+No, I want to fix it
+</options>
+<rules_exist>
+Y
+</question>
+</page>
+<page>
+<question>
+multi-choice
+Select countries which are landlocked.
+<options>
+6
+Slovakia
+Czech republic
+Germany
+China
+Switzerland
+Portugal
+</options>
+<reference>
+3
+1
+2
+5
+</reference>
+</question>
+</page>
+<page>
+<question>
+multi-choice
+How many stripes are there on the US flag?
+<options>
+4
+10
+11
+15
+13
+</options>
+<reference>
+1
+4
+</reference>
+</question>
+</page>
+</pages>
+<rules>
+<rule>
+3
+2
+1
+2
+3
+</rule>
+</rules>
+</quiz>

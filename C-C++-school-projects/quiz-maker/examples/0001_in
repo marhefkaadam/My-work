@@ -1,0 +1,84 @@
+create_quiz
+Kviz slovensko
+single-choice
+Co je hlavnym mestom Slovenska?
+4
+Presov
+Poprad
+Bratislava
+Kosice
+Y
+3
+Y
+Y
+multi-choice
+Vyber slovenskych rodakov!
+6
+Ludovit Stur
+Janko Kral
+Kralovna Elizabeth
+Albert Einstain
+Peter Bathanyi
+M. R. Stefanik
+1
+Y
+2
+Y
+5
+Y
+6
+N
+Y
+N
+text
+set
+Kde sa na SVK vyrabaju pracky?
+Poprad
+Y
+Spisska Nova Ves
+N
+Y
+Y
+single-choice
+Kolko maš rokov?
+2
+<18
+>=18
+N
+Y
+Y
+text
+contains-word
+Akou farbou by si natrel stenu ak by to bola prva farba slovenskej zastavy?
+bielou
+Y
+Y
+multi-choice
+Ake pivo sa vyraba na Slovensku?
+5
+Saris
+Pilsner urquell
+Zlaty bazant
+Staropramen
+Desperados
+1
+Y
+3
+Y
+4
+N
+N
+2
+5
+Y
+1
+4
+N
+export
+1
+automatic_export
+Y
+result
+1
+list
+quit

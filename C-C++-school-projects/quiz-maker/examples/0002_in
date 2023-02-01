@@ -1,0 +1,87 @@
+create_quiz
+General knowledge - extended
+single-choice
+How many time zones are there in Russia?
+5
+11
+12
+13
+8
+9
+y
+1
+y
+n
+text
+contains-word
+What’s the national flower of Japan?
+cherry
+y
+n
+text
+exact-match
+How many days does it take for the Earth to orbit the Sun?
+365
+y
+y
+text
+set
+Until 1923, what was the Turkish city of Istanbul called?
+Constantinople
+y
+constantinople
+n
+y
+y
+single-choice
+What’s the capital of Canada?
+3
+Ottawa
+Toronto
+Vancouver
+y
+1
+y
+n
+single-choice
+Are you sure about your previous answer?
+2
+Yes
+No, I want to fix it
+n
+y
+y
+multi-choice
+Select countries which are landlocked.
+6
+Slovakia
+Czech republic
+Germany
+China
+Switzerland
+Portugal
+1
+y
+2
+y
+5
+n
+y
+y
+multi-choice
+How many stripes are there on the US flag?
+4
+10
+11
+15
+13
+4
+n
+n
+2
+3
+n
+export
+1
+general_knowledge_extended
+quit
